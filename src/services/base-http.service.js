@@ -8,6 +8,7 @@ export default class BaseHttpService {
     this.routerStore = routerStore;
   }
 
+  
   async get(endpoint, options = {}) {
     Object.assign(options, this._getCommonOptions());
     return axios.get(`${this.BASE_URL}/${endpoint}`, options)
